@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TEST.Properties
+namespace Bienvenue.Properties
 {
 
 
