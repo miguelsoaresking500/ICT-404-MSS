@@ -34,7 +34,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.Bienvenue = new System.Windows.Forms.Button();
             this.TbxName = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_quitter = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -81,21 +81,23 @@
             this.TbxName.TabIndex = 6;
             this.TbxName.TextChanged += new System.EventHandler(this.TbxName_TextChanged);
             // 
-            // button1
+            // btn_quitter
             // 
-            this.button1.Location = new System.Drawing.Point(289, 168);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(52, 50);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Quitter";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_quitter.Enabled = false;
+            this.btn_quitter.Location = new System.Drawing.Point(289, 168);
+            this.btn_quitter.Name = "btn_quitter";
+            this.btn_quitter.Size = new System.Drawing.Size(52, 50);
+            this.btn_quitter.TabIndex = 7;
+            this.btn_quitter.Text = "Quitter";
+            this.btn_quitter.UseVisualStyleBackColor = true;
+            this.btn_quitter.Click += new System.EventHandler(this.btn_quitter_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 266);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_quitter);
             this.Controls.Add(this.TbxName);
             this.Controls.Add(this.Bienvenue);
             this.Controls.Add(this.lbl_name);
@@ -114,7 +116,7 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.Button Bienvenue;
         private System.Windows.Forms.TextBox TbxName;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_quitter;
     }
 }
 
