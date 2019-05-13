@@ -32,8 +32,8 @@ namespace Bienvenue
         private void Bienvenue_Click(object sender, EventArgs e)
         {
             lbl_name.Text = "Bonjour " + TbxName.Text; //afiche bonjour plus le texte ecrit
-            Bienvenue.Enabled = false; //desactive le boutton Binvenue
             TbxName.Text = "";
+            Bienvenue.Enabled = false; //desactive le boutton Binvenue
             btn_quitter.Enabled = true;//active le boutton quitter
         }
 
