@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EXO_Deductions
+namespace EXO_Déduction
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace EXO_Deductions
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Déductions());
+            Application.Run(new Form1());
         }
     }
 }

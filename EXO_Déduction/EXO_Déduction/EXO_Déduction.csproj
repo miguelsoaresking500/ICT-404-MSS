@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D3231495-223B-4394-8ECD-08034A5EBB97}</ProjectGuid>
+    <ProjectGuid>{CA2B6278-219E-4154-82D0-35F763754FF1}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>EXO_Deductions</RootNamespace>
-    <AssemblyName>EXO_Deductions</AssemblyName>
+    <RootNamespace>EXO_Déduction</RootNamespace>
+    <AssemblyName>EXO_Déduction</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -49,7 +49,7 @@
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
+    <Compile Include="Form1.designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />

@@ -168,6 +168,7 @@
             this.btn_commander.TabIndex = 12;
             this.btn_commander.Text = "commander";
             this.btn_commander.UseVisualStyleBackColor = true;
+            this.btn_commander.Click += new System.EventHandler(this.btn_commander_Click);
             // 
             // Pizza
             // 

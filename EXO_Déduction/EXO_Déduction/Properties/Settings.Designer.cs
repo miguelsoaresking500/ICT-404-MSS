@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EXO_Deductions.Properties
+namespace EXO_Déduction.Properties
 {
 
 

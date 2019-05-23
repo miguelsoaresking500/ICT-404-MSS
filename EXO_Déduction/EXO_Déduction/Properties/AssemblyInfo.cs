@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // Les informations générales relatives à un assembly dépendent de
 // l'ensemble d'attributs suivant. Changez les valeurs de ces attributs pour modifier les informations
 // associées à un assembly.
-[assembly: AssemblyTitle("EXO_Deductions")]
+[assembly: AssemblyTitle("EXO_Déduction")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EXO_Deductions")]
+[assembly: AssemblyProduct("EXO_Déduction")]
 [assembly: AssemblyCopyright("Copyright ©  2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // Le GUID suivant est pour l'ID de la typelib si ce projet est exposé à COM
-[assembly: Guid("d3231495-223b-4394-8ecd-08034a5ebb97")]
+[assembly: Guid("ca2b6278-219e-4154-82d0-35f763754ff1")]
 
 // Les informations de version pour un assembly se composent des quatre valeurs suivantes :
 //
