@@ -42,7 +42,12 @@
             this.btn_commander = new System.Windows.Forms.Button();
             this.Pâte = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.rdo_Maigre = new System.Windows.Forms.RadioButton();
+            this.rdo_Normale = new System.Windows.Forms.RadioButton();
+            this.rdo_Bufflone = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Pâte.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_Table
@@ -57,7 +62,7 @@
             // cbx_Anchois
             // 
             this.cbx_Anchois.AutoSize = true;
-            this.cbx_Anchois.Location = new System.Drawing.Point(216, 89);
+            this.cbx_Anchois.Location = new System.Drawing.Point(273, 92);
             this.cbx_Anchois.Name = "cbx_Anchois";
             this.cbx_Anchois.Size = new System.Drawing.Size(64, 17);
             this.cbx_Anchois.TabIndex = 1;
@@ -71,6 +76,7 @@
             this.txb_Table.Name = "txb_Table";
             this.txb_Table.Size = new System.Drawing.Size(28, 20);
             this.txb_Table.TabIndex = 2;
+            this.txb_Table.TextChanged += new System.EventHandler(this.txb_Table_TextChanged);
             // 
             // rdo_Xfine
             // 
@@ -121,7 +127,7 @@
             // cbx_Câpres
             // 
             this.cbx_Câpres.AutoSize = true;
-            this.cbx_Câpres.Location = new System.Drawing.Point(216, 112);
+            this.cbx_Câpres.Location = new System.Drawing.Point(273, 114);
             this.cbx_Câpres.Name = "cbx_Câpres";
             this.cbx_Câpres.Size = new System.Drawing.Size(59, 17);
             this.cbx_Câpres.TabIndex = 8;
@@ -132,7 +138,7 @@
             // cbx_Jambon
             // 
             this.cbx_Jambon.AutoSize = true;
-            this.cbx_Jambon.Location = new System.Drawing.Point(216, 135);
+            this.cbx_Jambon.Location = new System.Drawing.Point(274, 137);
             this.cbx_Jambon.Name = "cbx_Jambon";
             this.cbx_Jambon.Size = new System.Drawing.Size(63, 17);
             this.cbx_Jambon.TabIndex = 9;
@@ -143,7 +149,7 @@
             // cbx_Crevettes
             // 
             this.cbx_Crevettes.AutoSize = true;
-            this.cbx_Crevettes.Location = new System.Drawing.Point(216, 158);
+            this.cbx_Crevettes.Location = new System.Drawing.Point(274, 159);
             this.cbx_Crevettes.Name = "cbx_Crevettes";
             this.cbx_Crevettes.Size = new System.Drawing.Size(71, 17);
             this.cbx_Crevettes.TabIndex = 10;
@@ -154,7 +160,7 @@
             // lbl_Commande
             // 
             this.lbl_Commande.AutoSize = true;
-            this.lbl_Commande.Location = new System.Drawing.Point(86, 204);
+            this.lbl_Commande.Location = new System.Drawing.Point(62, 199);
             this.lbl_Commande.Name = "lbl_Commande";
             this.lbl_Commande.Size = new System.Drawing.Size(60, 13);
             this.lbl_Commande.TabIndex = 11;
@@ -162,7 +168,7 @@
             // 
             // btn_commander
             // 
-            this.btn_commander.Location = new System.Drawing.Point(202, 199);
+            this.btn_commander.Location = new System.Drawing.Point(235, 194);
             this.btn_commander.Name = "btn_commander";
             this.btn_commander.Size = new System.Drawing.Size(110, 23);
             this.btn_commander.TabIndex = 12;
@@ -176,7 +182,7 @@
             this.Pâte.Controls.Add(this.rdo_Fine);
             this.Pâte.Controls.Add(this.rdo_Nomale);
             this.Pâte.Controls.Add(this.rdo_Epaisse);
-            this.Pâte.Location = new System.Drawing.Point(62, 75);
+            this.Pâte.Location = new System.Drawing.Point(31, 77);
             this.Pâte.Name = "Pâte";
             this.Pâte.Size = new System.Drawing.Size(122, 110);
             this.Pâte.TabIndex = 13;
@@ -190,17 +196,67 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Location = new System.Drawing.Point(31, 235);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(298, 59);
+            this.label1.Size = new System.Drawing.Size(330, 59);
             this.label1.TabIndex = 14;
             this.label1.Text = "...";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // rdo_Maigre
+            // 
+            this.rdo_Maigre.AutoSize = true;
+            this.rdo_Maigre.Location = new System.Drawing.Point(22, 36);
+            this.rdo_Maigre.Name = "rdo_Maigre";
+            this.rdo_Maigre.Size = new System.Drawing.Size(57, 17);
+            this.rdo_Maigre.TabIndex = 15;
+            this.rdo_Maigre.TabStop = true;
+            this.rdo_Maigre.Text = "Maigre";
+            this.rdo_Maigre.UseVisualStyleBackColor = true;
+            this.rdo_Maigre.CheckedChanged += new System.EventHandler(this.rdo_Maigre_CheckedChanged);
+            // 
+            // rdo_Normale
+            // 
+            this.rdo_Normale.AutoSize = true;
+            this.rdo_Normale.Location = new System.Drawing.Point(22, 59);
+            this.rdo_Normale.Name = "rdo_Normale";
+            this.rdo_Normale.Size = new System.Drawing.Size(64, 17);
+            this.rdo_Normale.TabIndex = 16;
+            this.rdo_Normale.TabStop = true;
+            this.rdo_Normale.Text = "Normale";
+            this.rdo_Normale.UseVisualStyleBackColor = true;
+            this.rdo_Normale.CheckedChanged += new System.EventHandler(this.rdo_Normale_CheckedChanged);
+            // 
+            // rdo_Bufflone
+            // 
+            this.rdo_Bufflone.AutoSize = true;
+            this.rdo_Bufflone.Location = new System.Drawing.Point(22, 82);
+            this.rdo_Bufflone.Name = "rdo_Bufflone";
+            this.rdo_Bufflone.Size = new System.Drawing.Size(64, 17);
+            this.rdo_Bufflone.TabIndex = 17;
+            this.rdo_Bufflone.TabStop = true;
+            this.rdo_Bufflone.Text = "Bufflone";
+            this.rdo_Bufflone.UseVisualStyleBackColor = true;
+            this.rdo_Bufflone.CheckedChanged += new System.EventHandler(this.rdo_Bufflone_CheckedChanged);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.rdo_Maigre);
+            this.groupBox1.Controls.Add(this.rdo_Normale);
+            this.groupBox1.Controls.Add(this.rdo_Bufflone);
+            this.groupBox1.Location = new System.Drawing.Point(159, 77);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(100, 110);
+            this.groupBox1.TabIndex = 18;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Mozzarela";
+            // 
             // Pizza
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(367, 303);
+            this.AutoSize = true;
+            this.ClientSize = new System.Drawing.Size(384, 303);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Pâte);
             this.Controls.Add(this.btn_commander);
@@ -216,6 +272,8 @@
             this.Load += new System.EventHandler(this.Pizza_Load);
             this.Pâte.ResumeLayout(false);
             this.Pâte.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,6 +295,10 @@
         private System.Windows.Forms.Button btn_commander;
         private System.Windows.Forms.GroupBox Pâte;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.RadioButton rdo_Maigre;
+        private System.Windows.Forms.RadioButton rdo_Normale;
+        private System.Windows.Forms.RadioButton rdo_Bufflone;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 

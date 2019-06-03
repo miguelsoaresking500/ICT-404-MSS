@@ -51,55 +51,58 @@ namespace EXO_CommandePizza
                 String Total = String.Format("Pour la {0} ", Table);
                 if (rdo_Xfine.Checked == true)
                 {
-                    Total += "Pâte Extra Fine";
+                    Total += "Pâte Extra Fine avec";
                 }
                 if (rdo_Fine.Checked == true)
                 {
-                    Total += "Pâte Fine";
+                    Total += "Pâte Fine avec";
                 }
                 if (rdo_Nomale.Checked == true)
                 {
-                    Total += "Pâte Normale";
+                    Total += "Pâte Normale avec";
                 }
                 if (rdo_Epaisse.Checked == true)
                 {
-                    Total += "Pâte Epaisse";
+                    Total += "Pâte Epaisse avec";
                 }
                 if (cbx_Anchois.Checked == true)
                 {
-                    Total += "Pâte Anchois, ";
+                    Total += " Anchois,";
                 }
-                else
-                {
-                    Total += "";
-
-                }
+ 
                 if (cbx_Câpres.Checked == true)
                 {
-                    Total += " Câpres, ";
+                    Total += " Câpres,";
                 }
-                else
-                {
-                    Total += "";
-                }
+  
                 if (cbx_Jambon.Checked == true)
                 {
-                    Total += " Jambon, ";
+                    Total += " Jambon,";
                 }
-                else
-                {
-                    Total += "";
-                }
+        
                 if (cbx_Crevettes.Checked == true)
                 {
                     Total += " Crevettes  ";
                 }
-                else
+
+                if (rdo_Maigre.Checked == true)
+                {
+                    Total += "Mozzerela Maigre";
+                }
+
+                if (rdo_Normale.Checked == true)
                 {
                     Total += "";
                 }
+                if (rdo_Bufflone.Checked == true)
+                {
+                    Total += "Mozzerela Bufflone";
+                }
+           
 
                 label1.Text = Total;
+
+                label1.Text = label1.Text.Substring(0, label1.Text.Length );
 
 
             }
@@ -141,6 +144,38 @@ namespace EXO_CommandePizza
         }
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rdo_Maigre_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo_Maigre.Checked == true)
+            {
+                rdo_Bufflone.Checked = false;
+                rdo_Normale.Checked = false;
+            }
+        }
+
+        private void rdo_Normale_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo_Normale.Checked == true)
+            {
+                rdo_Bufflone.Checked = false;
+                rdo_Maigre.Checked = false;
+            }
+        }
+
+        private void rdo_Bufflone_CheckedChanged(object sender, EventArgs e)
+        {
+            if (rdo_Bufflone.Checked == true)
+            {
+                rdo_Maigre.Checked = false;
+                rdo_Normale.Checked = false;
+            }
+        }
+
+        private void txb_Table_TextChanged(object sender, EventArgs e)
         {
 
         }
