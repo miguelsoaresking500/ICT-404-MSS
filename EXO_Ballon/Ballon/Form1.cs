@@ -23,17 +23,32 @@ namespace Ballon
 
         private void frmBallon_Load(object sender, EventArgs e)
         {
-
+            tick.Enabled = false;
         }
 
-        private void cmdStart_Click(object sender, EventArgs e)
+        
+
+        private void tick_Tick(object sender, EventArgs e)
         {
+            
             Random Y = new Random();
             int y = Y.Next(50, 500);
             Random X = new Random();
             int x = X.Next(55, 465);
             pctBallon.SetBounds(x, y, 55, 50);
             pctBallon.Visible = true;
+        }
+        private void cmdStart_Click(object sender, EventArgs e)
+        {
+            
+            if (tick.Enabled)
+            {
+                tick.Enabled = false;
+            }
+            else
+            {
+                tick.Enabled = true;
+            }
         }
     }
 }

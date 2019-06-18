@@ -32,6 +32,7 @@
             this.cmdStart = new System.Windows.Forms.Button();
             this.pctBallon = new System.Windows.Forms.PictureBox();
             this.tmrTicTac = new System.Windows.Forms.Timer(this.components);
+            this.tick = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pctBallon)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +62,12 @@
             // 
             this.tmrTicTac.Interval = 25;
             // 
+            // tick
+            // 
+            this.tick.Enabled = true;
+            this.tick.Interval = 1000;
+            this.tick.Tick += new System.EventHandler(this.tick_Tick);
+            // 
             // frmBallon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -82,6 +89,7 @@
         private System.Windows.Forms.Button cmdStart;
         private System.Windows.Forms.PictureBox pctBallon;
         private System.Windows.Forms.Timer tmrTicTac;
+        private System.Windows.Forms.Timer tick;
     }
 }
 
