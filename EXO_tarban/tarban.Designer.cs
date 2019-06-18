@@ -30,13 +30,13 @@
         {
             this.lbl_base = new System.Windows.Forms.Label();
             this.rdo_serie = new System.Windows.Forms.RadioButton();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.cbx_taxe = new System.Windows.Forms.CheckBox();
             this.gb_moteur = new System.Windows.Forms.GroupBox();
             this.rdo_nserie = new System.Windows.Forms.RadioButton();
             this.btn_zero = new System.Windows.Forms.Button();
             this.lbl_total = new System.Windows.Forms.Label();
             this.lbl_totalf = new System.Windows.Forms.Label();
+            this.tbx_base = new System.Windows.Forms.TextBox();
             this.gb_moteur.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -59,14 +59,7 @@
             this.rdo_serie.TabStop = true;
             this.rdo_serie.Text = "1.4 : de série";
             this.rdo_serie.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(129, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.rdo_serie.Click += new System.EventHandler(this.rdo_serie_CheckedChanged);
             // 
             // cbx_taxe
             // 
@@ -77,6 +70,7 @@
             this.cbx_taxe.TabIndex = 3;
             this.cbx_taxe.Text = "Taxes (6.8%)";
             this.cbx_taxe.UseVisualStyleBackColor = true;
+            this.cbx_taxe.Click += new System.EventHandler(this.cbx_taxe_CheckedChanged);
             // 
             // gb_moteur
             // 
@@ -99,6 +93,7 @@
             this.rdo_nserie.TabStop = true;
             this.rdo_nserie.Text = "1.6 : 2240.-";
             this.rdo_nserie.UseVisualStyleBackColor = true;
+            this.rdo_nserie.Click += new System.EventHandler(this.rdo_nserie_CheckedChanged);
             // 
             // btn_zero
             // 
@@ -127,18 +122,28 @@
             this.lbl_totalf.Size = new System.Drawing.Size(16, 13);
             this.lbl_totalf.TabIndex = 7;
             this.lbl_totalf.Text = "...";
+            this.lbl_totalf.TextChanged += new System.EventHandler(this.rdo_serie_CheckedChanged);
+            this.lbl_totalf.Click += new System.EventHandler(this.lbl_totalf_Click);
+            // 
+            // tbx_base
+            // 
+            this.tbx_base.Location = new System.Drawing.Point(139, 61);
+            this.tbx_base.Name = "tbx_base";
+            this.tbx_base.Size = new System.Drawing.Size(100, 20);
+            this.tbx_base.TabIndex = 8;
+            this.tbx_base.TextChanged += new System.EventHandler(this.tbx_base_TextChanged);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 409);
+            this.Controls.Add(this.tbx_base);
             this.Controls.Add(this.lbl_totalf);
             this.Controls.Add(this.lbl_total);
             this.Controls.Add(this.btn_zero);
             this.Controls.Add(this.gb_moteur);
             this.Controls.Add(this.cbx_taxe);
-            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lbl_base);
             this.Name = "Form1";
             this.Text = "Traban 2000";
@@ -154,13 +159,13 @@
 
         private System.Windows.Forms.Label lbl_base;
         private System.Windows.Forms.RadioButton rdo_serie;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.CheckBox cbx_taxe;
         private System.Windows.Forms.GroupBox gb_moteur;
         private System.Windows.Forms.RadioButton rdo_nserie;
         private System.Windows.Forms.Button btn_zero;
         private System.Windows.Forms.Label lbl_total;
         private System.Windows.Forms.Label lbl_totalf;
+        private System.Windows.Forms.TextBox tbx_base;
     }
 }
 
